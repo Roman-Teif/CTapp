@@ -1,11 +1,9 @@
 <!DOCTYPE html>
   <html>
     <head>
-      <!--Import Google Icon Font-->
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <!--Import materialize.css-->
     </head>
     <body>
+      
 ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/Roman-Teif/CTapp/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
