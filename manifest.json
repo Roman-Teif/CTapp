@@ -1,6 +1,6 @@
 {
-  "short_name": "CT™",
   "name": "Crowd Travels™",
+  "short_name": "CT™",
   "icons": [
  {
    "src": "\/android-icon-36x36.png",
@@ -39,8 +39,8 @@
    "density": "4.0"
   }
  ]  ],
-  "start_url": "",
+  "start_url": "/utm_source=homescreen",
   "background_color": "#ffffff",
   "theme_color": "#ffffff",
-  "display": ""
+  "display": "standalone"
 }
