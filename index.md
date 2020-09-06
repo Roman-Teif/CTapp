@@ -1,6 +1,7 @@
 <!DOCTYPE html>
   <html>
     <head>
+      <!-- Manifest -->
       <link rel="manifest" href="/manifest.json">
     </head>
     <body>
