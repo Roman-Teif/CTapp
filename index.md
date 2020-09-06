@@ -1,3 +1,18 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="css/app.css">
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <!-- Manifest file -->
+      <link rel="manifest" href="manifest.json">
+      <title>Crowd Travels™</title>
+    </head>
 ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/Roman-Teif/CTapp/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
