@@ -4,7 +4,7 @@
   "start_url": "index.html",
   "background_color": "white",
   "theme_color": "blue",
-  "display": "fullscreen",
+  "display": "standalone",
   "icons": [
   {
    "src": "images/android-icon-192x192.png",
