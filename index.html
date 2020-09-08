@@ -6,7 +6,13 @@
   <link rel="stylesheet" href="css/w3.css"> <!-- Responsive w3.css -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> <!-- Google Material Icons -->
   <link rel="manifest" href="/manifest.json">   <!-- Manifest -->// Register service worker to control making site work offline
-  <script src="index.js" defer></script>
+  <script>
+   if('serviceWorker' in navigator) {
+   navigator.serviceWorker
+           .register('/pwa-examples/a2hs/sw.js')
+           .then(function() { console.log('Service Worker Registered'); });
+   }
+  </script>
  </head>
  
  <body>
