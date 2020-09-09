@@ -6,7 +6,19 @@
   <link rel="stylesheet" href="css/w3.css"> <!-- Responsive w3.css -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> <!-- Google Material Icons -->
   <link rel="manifest" href="manifest.json">   <!-- Manifest -->
-  <script source="js/header.js" defer></script>
+  <script>
+  if ('serviceWorker' in navigator) {
+   window.addEventListener('load', function() {
+    navigator.serviceWorker.register('sw.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+   });
+  }
+  </script>
  </head>
  
  <body>
