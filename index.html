@@ -31,8 +31,8 @@
   <a href="#" class="w3-bar-item w3-button">Link 3</a>
   </div>
   <i><img src="images/android-icon-36x36.png"></i>
-  <i><button class="w3-button w3-white w3-large" onclick="tab_open()">&#xe8b8;</button></i>
-  <i><button class="w3-button w3-white w3-right w3-large" onclick="menu_open()">&#9776;</button></i>
+  <i><button class="w3-button w3-white w3-large" onclick="tab_open('SettingsTab')">settings;</button></i>
+  <i><button class="w3-button w3-white w3-right w3-large" onclick="menu_open()">times;</button></i>
    
   <header class="w3-container w3-center">
     <!--img src="images/LittleMan/Brain.jpg" alt="Lights" style="width:100%;max-width:400px"-->
@@ -66,7 +66,7 @@
   document.getElementById("myOverlay").style.display = "none";
   }
    
-  function tab_open() {
+  function tab_open(tab) {
   // close all tabs
   var i;
   var x = document.getElementsByClassName("tab");
@@ -74,7 +74,7 @@
     x[i].style.display = "none";  
   
    // open asked tab
-  document.getElementById(SettingsTab).style.display = "block";
+  document.getElementById(tab).style.display = "block";
   }
   </script>
 
