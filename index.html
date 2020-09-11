@@ -25,15 +25,14 @@
   <!-- Page Content -->
   <div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
   <div class="w3-sidebar w3-bar-block w3-white w3-animate-right" style="display:none;z-index:4;width:40%;right:0" id="mySidebar">
-  <button class="w3-bar-item w3-white w3-button w3-large" onclick="w3_close()">Close &times;</button>
+  <button class="w3-bar-item w3-white w3-button w3-large" onclick="menu_close()">Close &times;</button>
   <a href="#" class="w3-bar-item w3-button">Link 1</a>
   <a href="#" class="w3-bar-item w3-button">Link 2</a>
   <a href="#" class="w3-bar-item w3-button">Link 3</a>
   </div>
-  <a href="index.html"><i><img src="images/android-icon-36x36.png"></i><a>
-  <a href="config.html"><i class="material-icons" style="font-size:24px;color:red">settings</i><a>
-  <i><button class="w3-button w3-white w3-right w3-large" onclick="w3_open()">&#9776;</button></i>
-'  
+  <i><button class="w3-button w3-white w3-large" onclick="tab_open("settings")">settings</button></i>
+  <i><button class="w3-button w3-white w3-right w3-large" onclick="menu_open()">&#9776;</button></i>
+   
   <header class="w3-container w3-center">
     <!--img src="images/LittleMan/Brain.jpg" alt="Lights" style="width:100%;max-width:400px"-->
     <h1>Crowd Travels™</h1>                                                                                                                                                          <h1></h1>                                                                        
@@ -42,21 +41,42 @@
   <section class="w3-container w3-center">
    <p>Here will be the content</p>
   </section>
+  
+  <article id="SettingsTab" class="w3-container w3-display-container tab">
+  <span onclick="this.parentElement.style.display='none'"
+  class="w3-button w3-large w3-display-topright">&times;</span>
+  <h2>Settings</h2>
+  <p>Wallet Settings</p>
+  <p>Node Settings</p> 
+  </article>
 
   <footer class="w3-container w3-white w3-center">
    <h5>© 2020 Roman Teif</h5>
   </footer>
 
   <script>
-  function w3_open() {
+  function menu_open() {
   document.getElementById("myOverlay").style.display = "block";
   document.getElementById("mySidebar").style.display = "block";
   }
 
-  function w3_close() {
+  function menu_close() {
   document.getElementById("mySidebar").style.display = "none";
   document.getElementById("myOverlay").style.display = "none";
   }
+   
+  function tab_open(tab) {
+  // close all tabs
+  var i;
+  var x = document.getElementsByClassName("tab");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+
+  // open asked tab
+
+  "settings"   document.getElementById(SettingsTab).style.display = "block";
+
+
   </script>
 
  </body>
