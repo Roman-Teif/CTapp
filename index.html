@@ -30,6 +30,7 @@
   <a href="#" class="w3-bar-item w3-button">Link 2</a>
   <a href="#" class="w3-bar-item w3-button">Link 3</a>
   </div>
+  <i><img src="images/android-icon-36x36.png">
   <i><button class="w3-button w3-white w3-large" onclick="tab_open("settings")">settings</button></i>
   <i><button class="w3-button w3-white w3-right w3-large" onclick="menu_open()">&#9776;</button></i>
    
@@ -42,13 +43,13 @@
    <p>Here will be the login.register, etc</p>
   </section> 
   
-  <div id="SettingsTab" class="w3-container w3-display-container tab">
+  <section id="SettingsTab" class="w3-container w3-display-container tab">
   <span onclick="this.parentElement.style.display='none'"
   class="w3-button w3-large w3-display-topright">&times;</span>
   <h2>Settings</h2>
   <p>Wallet Settings</p>
   <p>Node Settings</p> 
-  </div>
+  </section>
 
   <footer class="w3-container w3-white w3-center">
    <h5>© 2020 Roman Teif</h5>
@@ -71,12 +72,10 @@
   var x = document.getElementsByClassName("tab");
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";  
-
-  // open asked tab
-
+  
+   // open asked tab
   "settings"   document.getElementById(SettingsTab).style.display = "block";
-
-
+  }
   </script>
 
  </body>
