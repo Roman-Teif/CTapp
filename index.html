@@ -23,7 +23,7 @@
  
  <body>
   <!-- Page Content -->
-  <div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+  <div class="w3-overlay w3-animate-opacity" onclick="menu_close()" style="cursor:pointer" id="myOverlay"></div>
   <div class="w3-sidebar w3-bar-block w3-white w3-animate-right" style="display:none;z-index:4;width:40%;right:0" id="mySidebar">
   <button class="w3-bar-item w3-white w3-button w3-large" onclick="menu_close()">Close &times;</button>
   <a href="#" class="w3-bar-item w3-button">Link 1</a>
@@ -67,13 +67,13 @@
   }
   </script>
   <script>
-  function tab_open(tab) {
+  function tab_open(tab) { // hide all tabs
    var i;
   var x = document.getElementsByClassName("tab");
-  for (i = 0; i < x.length; i++) {
+   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";  
-  
-  document.getElementById(tab).style.display = "block";
+   }
+  document.getElementById(tab).style.display = "block"; // show tab by name
   }
   </script>
 
