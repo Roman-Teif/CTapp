@@ -36,10 +36,10 @@
    
   <header class="w3-container w3-center">
     <!--img src="images/LittleMan/Brain.jpg" alt="Lights" style="width:100%;max-width:400px"-->
-    <h1>Crowd Travels™</h1>                                                                                                                                                          <h1></h1>                                                                        
+    <h1>Crowd Travels™</h1>   
   </header>
 
-  <div id="MainTab" class="w3-container w3-display-container tab">
+  <div id="MainTab" class="w3-container w3-display-container w3-center tab">
    <p>Here will be the login.register, etc</p>
   </div> 
   
@@ -67,13 +67,11 @@
   }
    
   function tab_open(tab) {
-  // close all tabs
-  var i;
+   var i;
   var x = document.getElementsByClassName("tab");
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";  
   
-   // open asked tab
   document.getElementById(tab).style.display = "block";
   }
   </script>
