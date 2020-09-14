@@ -52,7 +52,18 @@
    <h2>Settings</h2>
    <button onclick="openSettingsSection('AppSettings')" class="w3-button w3-block w3-white w3-left-align">Application Settings</button>
     <div id="AppSettings" class="w3-hide w3-container">
-    <p>Application inputs..</p>
+     <div class="w3-row-padding">
+      <div class="w3-third">
+       <input class="w3-input w3-border" type="text" placeholder="Application Name">
+      </div>
+      <div class="w3-third">
+       <input class="w3-check" type="checkbox">
+       <label> Bind the Device</label></p>
+      </div>
+      <div class="w3-third">
+       <input class="w3-input w3-border" type="text" placeholder="Three">
+      </div>
+     </div>
     </div>
    <button onclick="openSettingsSection('NodeSettings')" class="w3-button w3-block w3-white w3-left-align">Nodes Settings</button>
     <div id="NodeSettings" class="w3-hide w3-container">
