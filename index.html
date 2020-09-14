@@ -30,8 +30,10 @@
   <a href="#" class="w3-bar-item w3-button">Link 2</a>
   <a href="#" class="w3-bar-item w3-button">Link 3</a>
   </div>
+  
+  <!-- Control panel -->
   <button class="w3-button w3-white w3-large" onclick="tab_open('MainTab')"><img src="images/android-icon-36x36.png"></button>
-   <button class="w3-button w3-white w3-large" onclick="tab_open('SettingsTab')"><i class="material-icons">settings</i></button>
+  <button class="w3-button w3-white w3-large" onclick="tab_open('SettingsTab')"><i class="material-icons">settings</i></button>
   <button class="w3-button w3-white w3-right w3-large" onclick="menu_open()"><i  class="material-icons">menu</i></button>
    
   <header class="w3-container w3-center">
@@ -39,41 +41,23 @@
     <h1>Crowd Travels™</h1>   
   </header>
 
+  <!-- MainTab -->
   <div id="MainTab" class="w3-container w3-display-container w3-center tab">
    <p>Here will be the login.register, etc</p>
   </div> 
   
+  <!-- Settings Tab -->
   <div id="SettingsTab" class="w3-container w3-display-container tab" style="display:none">
-  <span onclick="tab_open('MainTab')"   class="w3-button w3-large w3-display-topright"><i class="material-icons">close</i></span>
-  <h2>Settings</h2>
-  <p>Wallet Settings</p>
-  <p>Node Settings</p> 
- <p>Wallet Settings</p>
-  <p>Node Settings</p> 
- <p>Wallet Settings</p>
-  <p>Node Settings</p> 
- <p>Wallet Settings</p>
-  <p>Node Settings</p> 
- <p>Wallet Settings</p>
-  <p>Node Settings</p> 
- <p>Wallet Settings</p>
-  <p>Node Settings</p> 
- <p>Wallet Settings</p>
-  <p>Node Settings</p> 
- <p>Wallet Settings</p>
-  <p>Node Settings</p> 
- <p>Wallet Settings</p>
-  <p>Node Settings</p> 
- <p>Wallet Settings</p>
-  <p>Node Settings</p> 
- <p>Wallet Settings</p>
-  <p>Node Settings</p> 
- <p>Wallet Settings</p>
-  <p>Node Settings</p> 
- <p>Wallet Settings</p>
-  <p>Node Settings</p> 
- <p>Wallet Settings</p>
-  <p>Node Settings</p> 
+   <span onclick="tab_open('MainTab')"   class="w3-button w3-large w3-display-topright"><i class="material-icons">close</i></span>
+   <h2>Settings</h2>
+   <button onclick="openSettingsSection('AppSettings')" class="w3-button w3-block w3-black w3-left-align">Application Settings</button>
+    <div id="AppSettings" class="w3-hide w3-container">
+    <p>Application inputs..</p>
+   <button onclick="openSettingsSection('NodeSettings')" class="w3-button w3-block w3-black w3-left-align">Nodes Settings</button>
+    <div id="NodeSettings" class="w3-hide w3-container">
+    <p>Some Nodes inputs..</p>
+</div>
+
   </div>
 
   <footer class="w3-container w3-white w3-center">
@@ -90,17 +74,30 @@
   document.getElementById("mySidebar").style.display = "none";
   document.getElementById("myOverlay").style.display = "none";
   }
-  </script>
-  <script>
+
   function tab_open(tab) { // hide all tabs
    var i;
-  var x = document.getElementsByClassName("tab");
+   var x = document.getElementsByClassName("tab");
    for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";  
    }
-  document.getElementById(tab).style.display = "block"; // show tab by name
+   document.getElementById(tab).style.display = "block"; // show tab by name
   }
   </script>
+  <script>
+  function openSettingsSection(id) {
+   var x = document.getElementById(id);
+   if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace("w3-white", "w3-blue");
+   } else { 
+    x.className = x.className.replace(" w3-show", "");
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace("w3-blue", "w3-whitek");
+   }
+  }
+</script>
 
  </body>
 </html>
