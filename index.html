@@ -22,22 +22,21 @@
  </head>
  
  <body>
-  <!-- Page Content -->
-  <div class="w3-overlay w3-animate-opacity" onclick="menu_close()" style="cursor:pointer" id="myOverlay"></div>
+  <!-- Menu & Overlay Content -->
+  <div class="w3-overlay w3-animate-opacity" onclick="menuClose()" style="cursor:pointer" id="myOverlay"></div>
   <div class="w3-sidebar w3-bar-block w3-white w3-animate-right" style="display:none;z-index:4;width:40%;right:0" id="mySidebar">
-  <button class="w3-bar-item w3-white w3-button w3-large" onclick="menu_close()">Close &times;</button>
+  <button class="w3-bar-item w3-white w3-button w3-large" onclick="menuClose()">Close &times;</button>
   <a href="#" class="w3-bar-item w3-button">Link 1</a>
   <a href="#" class="w3-bar-item w3-button">Link 2</a>
   <a href="#" class="w3-bar-item w3-button">Link 3</a>
   </div>
   
   <!-- Control panel -->
-  <button class="w3-button w3-white w3-large" onclick="tab_open('MainTab')"><img src="images/android-icon-36x36.png"></button>
-  <button class="w3-button w3-white w3-large" onclick="tab_open('SettingsTab')"><i class="material-icons">settings</i></button>
-  <button class="w3-button w3-white w3-right w3-large" onclick="menu_open()"><i  class="material-icons">menu</i></button>
+  <button class="w3-button w3-white w3-large" onclick="tabOpen('MainTab')"><img src="images/android-icon-36x36.png"></button>
+  <button class="w3-button w3-white w3-large" onclick="tabOpen('SettingsTab')"><i class="material-icons">settings</i></button>
+  <button class="w3-button w3-white w3-right w3-large" onclick="menuOpen()"><i  class="material-icons">menu</i></button>
    
   <header class="w3-container w3-center">
-    <!--img src="images/LittleMan/Brain.jpg" alt="Lights" style="width:100%;max-width:400px"-->
     <h1>Crowd Travels™</h1>   
   </header>
 
@@ -48,9 +47,9 @@
   
   <!-- Settings Tab -->
   <div id="SettingsTab" class="w3-container w3-display-container tab" style="display:none">
-   <span onclick="tab_open('MainTab')"   class="w3-button w3-large w3-display-topright"><i class="material-icons">close</i></span>
+   <span onclick="tabOpen('MainTab')"   class="w3-button w3-large w3-display-topright"><i class="material-icons">close</i></span>
    <h2>Settings</h2>
-   <button onclick="openSettingsSection('AppSettings')" class="w3-button w3-block w3-white w3-left-align">Application Settings</button>
+   <button onclick="settingsOpen('AppSettings')" class="w3-button w3-block w3-white w3-left-align">Application Settings</button>
     <div id="AppSettings" class="w3-hide w3-container">
      <div class="w3-row-padding">
       <div class="w3-third">
@@ -65,30 +64,40 @@
       </div>
      </div>
     </div>
-   <button onclick="openSettingsSection('NodeSettings')" class="w3-button w3-block w3-white w3-left-align">Nodes Settings</button>
+   <button onclick="settingsOpen('SecuritySettings')" class="w3-button w3-block w3-white w3-left-align">Security Settings</button>
+    <div id="SecuritySettings" class="w3-hide w3-container">
+    <p>Some Security inputs..</p>
+    </div>
+   <button onclick="settingsOpen('NetworkSettings')" class="w3-button w3-block w3-white w3-left-align">Network Settings</button>
+    <div id="NetworkSettings" class="w3-hide w3-container">
+    <p>Some Network inputs..</p>
+    </div>
+   <button onclick="settingsOpen('NodeSettings')" class="w3-button w3-block w3-white w3-left-align">Nodes Settings</button>
     <div id="NodeSettings" class="w3-hide w3-container">
     <p>Some Nodes inputs..</p>
     </div>
+   <button onclick="settingsOpen('PartakerSettings')" class="w3-button w3-block w3-white w3-left-align">Partaker Settings</button>
+    <div id="PartakerSettings" class="w3-hide w3-container">
+    <p>Some Partaker inputs..</p>
+    </div>
 </div>
-
-  </div>
 
   <footer class="w3-container w3-white w3-center">
    <h5>© 2020 Roman Teif</h5>
   </footer>
 
   <script>
-  function menu_open() {
+  function menuOpen() {
   document.getElementById("myOverlay").style.display = "block";
   document.getElementById("mySidebar").style.display = "block";
   }
 
-  function menu_close() {
+  function menuClose() {
   document.getElementById("mySidebar").style.display = "none";
   document.getElementById("myOverlay").style.display = "none";
   }
 
-  function tab_open(tab) { // hide all tabs
+  function tabOpen(tab) { // hide all tabs
    var i;
    var x = document.getElementsByClassName("tab");
    for (i = 0; i < x.length; i++) {
@@ -96,9 +105,8 @@
    }
    document.getElementById(tab).style.display = "block"; // show tab by name
   }
-  </script>
-  <script>
-  function openSettingsSection(id) {
+
+  function settingsOpen(id) {
    var x = document.getElementById(id);
    if (x.className.indexOf("w3-show") == -1) {
     x.className += " w3-show";
@@ -107,7 +115,7 @@
    } else { 
     x.className = x.className.replace(" w3-show", "");
     x.previousElementSibling.className = 
-    x.previousElementSibling.className.replace("w3-blue", "w3-whitek");
+    x.previousElementSibling.className.replace("w3-blue", "w3-white");
    }
   }
 </script>
