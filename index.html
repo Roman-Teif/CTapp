@@ -47,18 +47,25 @@
   
   <!-- Authentication panel -->
   <form id="AuthForm" class="w3-container" style="display:block">
-     <div class="w3-row-padding">
-      <div class="w3-third"> <input class="w3-input w3-border" type="text" placeholder="User"> </div>
-      <div class="w3-third"> <input class="w3-input w3-border" type="text" placeholder="Password"> </div>
-      <div class="w3-third"> Fb G PayPal Login</div>
-     </div>
-     </div>
-     <div class="w3-row-padding">
-      <div class="w3-third">Restore Login</div>
-      <div class="w3-third">Restore Password</div>
-      <div class="w3-third">Register</div>
-     </div>
-    </form>
+   <div class="w3-row-padding">
+    <div class="w3-third"> <input class="w3-input w3-border" type="text" placeholder="E-mail or phone number"> </div>
+    <div class="w3-third"> <input class="w3-input w3-border" type="password" placeholder="Password"> </div>
+    <div class="w3-third">
+     <!-- Google, Facebook, Twitter, GitHub -->
+     <button id="loginFB" class="w3-button w3-white w3-large" onclick="logIn('Facebook')" style="display:block">
+      <img src="images/icon-facebook-36x36.png"></button>       
+     <button id="loginGoogle" class="w3-button w3-white w3-large" onclick="logIn('Coogle')" style="display:block">
+      <img src="images/icon-google-36x36.png"></button>       
+     <button id="loginTwitter" class="w3-button w3-white w3-large" onclick="logIn('Twitter')" style="display:block">
+      <img src="images/icon-twitter-36x36.png"></button>       
+     <button id="loginGithub" class="w3-button w3-white w3-large" onclick="logIn('Github')" style="display:block">
+      <img src="images/android-icon-github-36x36.png"></button>       
+     <button id="statusError" class="w3-button w3-white w3-large w3-right" onclick="logIn('Partaker')" style="display:block">
+      <i class= style="color:blue">Login</i></button>  
+    </div>
+   </div>
+   <div> <i>Restore Login</i><i>Restore Password</i><i>Register</i></div>
+  </form>
   <!-- Logged in panel -->
   <div id="LoggedInPanel" class="w3-container" style="display:none">
      <div class="w3-row-padding">
@@ -173,6 +180,9 @@
   }
  
   function restorePasswordOpen() {
+  }
+ 
+  function logIn(fed) {
   }
 </script>
 
