@@ -52,22 +52,22 @@
     <div class="w3-third"> <input class="w3-input w3-border" type="password" placeholder="Password"> </div>
     <div class="w3-third">
      <!-- Google, Facebook, Twitter, GitHub -->
-     <button id="loginFB" class="w3-button w3-white w3-large" onclick="logIn('Facebook')" style="display:block">
+     <button id="loginFB" class="w3-button w3-white w3-large" onclick="logIn('Facebook')" style="display:inline">
       <i><img src="images/icon-facebook-36x36.png"></i></button>       
-     <button id="loginGoogle" class="w3-button w3-white w3-large" onclick="logIn('Coogle')" style="display:block">
+     <button id="loginGoogle" class="w3-button w3-white w3-large" onclick="logIn('Coogle')" style="display:inline">
       <i><img src="images/icon-google-36x36.png"></i></button>       
-     <button id="loginTwitter" class="w3-button w3-white w3-large" onclick="logIn('Twitter')" style="display:block">
+     <button id="loginTwitter" class="w3-button w3-white w3-large" onclick="logIn('Twitter')" style="display:inline">
       <i><img src="images/icon-twitter-36x36.png"></i></button>       
-     <button id="loginGithub" class="w3-button w3-white w3-large" onclick="logIn('Github')" style="display:block">
+     <button id="loginGithub" class="w3-button w3-white w3-large" onclick="logIn('Github')" style="display:inline">
       <i><img src="images/icon-github-36x36.png"></i></button>       
     </div>
    </div>
    <div> 
-    <button id="statusError" class="w3-button w3-white w3-large w3-right" onclick="logIn('Partaker')" style="display:block">
+    <button id="loginPartaker" class="w3-button w3-white w3-large" onclick="logIn('Partaker')" style="display:block">
      <i style="color:blue">Login</i></button>  
      <i style="color:blue">Restore Login</i>
      <i style="color:blue">Restore Password</i>
-     <i>Register</i>
+     <istyle="color:blue">Register</i>
    </div>
   </form>
   <!-- Logged in panel -->
@@ -187,6 +187,7 @@
   }
  
   function logIn(fed) {
+   console.log('In LogIn');
   }
 </script>
 
