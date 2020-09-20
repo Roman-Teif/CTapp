@@ -19,6 +19,7 @@ class Persistent {
 
 class Settings extends Persistent {
  constructor() {
+  super("idb");
   this.deviceBound = false;
   this.partakerNodeURL = "";
   this.distributors = "";
@@ -34,6 +35,7 @@ class Settings extends Persistent {
   
 class States extends Persistent {
  constructor() { 
+  super ("idb");
   this.indicator = ""
   this.appInstalled = false;
   this.appInstalledVersion = "";
