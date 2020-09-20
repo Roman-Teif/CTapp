@@ -50,18 +50,36 @@ class States extends Persistent {
   
 class Process { //is it thread - TBD???
  constructor (type, id) {
-  this.type = processType; // worker, service worker, page, ??tab
+  this.type = processType; // 'worker', 'sw', 'page', ??tab
   this.ic = id; // 'index', 'node', 'sw'
   this.settings = new Settings () {
   }
   this.states = new States () {
   }
  }
- prerun () {
- // should be done befor the process loads
- // For example check if CT app is installed
+ 
+ swRegister () {
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+     navigator.serviceWorker.register('sw.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+     }, function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+     });
+    });
+   }
  }
- postrun () {
+ 
+ pre () {
+ // should be done befor the process loads
+ // For example check if CT app is installed latest version
+ // For pages register service Worker 
+ if (this.type === "page") { swRegister (); }
+ }
+ 
+ post () {
  // is to be done after the process loads
  // for example detect geolocation
  }
