@@ -52,7 +52,7 @@ class States extends Persistent {
   
 class Process { //is it thread - TBD???
  constructor (type, id) {
-  this.type = processType; // 'worker', 'sw', 'page', ??tab
+  this.type = type; // 'worker', 'sw', 'page', ??tab
   this.ic = id; // 'index', 'node', 'sw'
   console.log ("in process constructor: ", this.type + " " + this.id);
   this.settings = new Settings ();
@@ -74,7 +74,7 @@ class Process { //is it thread - TBD???
    }
  }
  
- before () {
+ before() {
  // should be done befor the process loads
  // For example check if CT app is installed latest version
  // For pages register service Worker 
@@ -82,7 +82,7 @@ class Process { //is it thread - TBD???
  if (this.type === "page") { swRegister (); }
  }
  
- after () {
+ after() {
  // is to be done after the process loads
  // for example detect geolocation
  }
