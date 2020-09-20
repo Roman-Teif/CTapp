@@ -56,7 +56,7 @@ class Process { //is it thread - TBD???
  constructor (type, id) {
   this.type = type; // 'worker', 'sw', 'page', ??tab
   this.ic = id; // 'index', 'node', 'sw'
-  console.log ("in process constructor: ", this.type + " " + this.id);
+  console.log ("in process constructor: ", this.type, this.id);
   this.settings = new Settings ();
   this.states = new States (); 
  }
@@ -80,12 +80,13 @@ class Process { //is it thread - TBD???
  // should be done befor the process loads
  // For example check if CT app is installed latest version
  // For pages register service Worker 
-  console.log ("in pre");
- if (this.type === "page") { swRegister (); }
+  console.log ("in before: ", this.id);
+ if (this.type === "page") {this.swRegister (); }
  }
  
  after() {
  // is to be done after the process loads
  // for example detect geolocation
+  console.log ("in after");
  }
 }
