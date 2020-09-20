@@ -36,7 +36,7 @@ class States extends Persistent {
  constructor() { 
   this.indicator = ""
   this.appInstalled = false;
-  this.appInstalledVersion: = "";
+  this.appInstalledVersion = "";
   this.partakerMode = "Incognito";
   this.bandwith = 0;
   console.log ("in states constructor: ", this.partakerMode);
