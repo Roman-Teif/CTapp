@@ -16,5 +16,26 @@
   </script>
  </head>
  <body onload="me.after()">
+  
+  <!-- Menu & Overlay Content -->
+  <div class="w3-overlay w3-animate-opacity" onclick="menuClose()" style="cursor:pointer" id="myOverlay"></div>
+  <div class="w3-sidebar w3-bar-block w3-white w3-animate-right" style="display:none;z-index:4;width:40%;right:0" id="mySidebar">
+  <button class="w3-bar-item w3-white w3-right w3-button w3-large" onclick="menuClose()">&times;</button>
+  <a href="Node.html" class="w3-bar-item w3-button">My Node</a>
+  <a href="#" class="w3-bar-item w3-button">Link 2</a>
+  <a href="#" class="w3-bar-item w3-button">Link 3</a>
+  </div>
+  
+  <!-- Control panel -->
+  <button class="w3-button w3-white w3-large" onclick="tabOpen('MainTab')"><img src="images/android-icon-36x36.png"></button>
+  <button class="w3-button w3-white w3-large" onclick="tabOpen('SettingsTab')"><i class="material-icons">settings</i></button>
+  <button class="w3-button w3-white w3-large w3-right" onclick="menuOpen()"><i class="material-icons">menu</i></button>
+  <button id="statusOK" class="w3-button w3-white w3-large w3-right" onclick="tabOpen('StatusTab')" style="display:block">
+   <i class="material-icons" style="color:LawnGreen">cloud_circle</i></button>
+  <button id="statusOff" class="w3-button w3-white w3-large w3-right" onclick="tabOpen('StatusTab')" style="display:none">
+   <i class="material-icons" style="color:orange">offline_pin</i></button>
+  <button id="statusError" class="w3-button w3-white w3-large w3-right" onclick="tabOpen('StatusTab')" style="display:none">
+   <i class="material-icons" style="color:red">error</i></button>
+  
   <h1> Node page </h1>
  </body>
