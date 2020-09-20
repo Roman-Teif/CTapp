@@ -55,10 +55,8 @@ class Process { //is it thread - TBD???
   this.type = processType; // 'worker', 'sw', 'page', ??tab
   this.ic = id; // 'index', 'node', 'sw'
   console.log ("in process constructor: ", this.type + " " + this.id);
-  this.settings = new Settings () {
-  }
-  this.states = new States () {
-  }
+  this.settings = new Settings ();
+  this.states = new States (); 
  }
  
  swRegister () {
